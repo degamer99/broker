@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Wisdom Crypto</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initialscale=1.0" />
+
+		<style>
+   *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    }
+    .conversion{
+    	background: rgba(230, 255, 255, .5);
+    }
+ .conversion  li{
+    list-style-type: none;
+    height: 5vh;
+    width: 80vw;
+    background: rgba(220, 220, 220, .75);
+    border: 1px solid rgba(220, 220, 220, 1);
+    margin: 0 5% 0 5%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+   }
+   h3{
+   	text-align: center;
+   }
+   #li1 {
+   	display: flex;
+   }
+   
+   li > a{
+    display: block;
+    position: relative;
+    height: 10vh;
+    width: 80vw;
+    left: 10vw;
+    background: rgba(220, 245, 245, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 1;
+   }
+   a{
+    text-decoration: none;
+   }
+   .head {
+   	display: flex;
+   	justify-content: space-around;
+   	align-items: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: -1px;
+    height: 10vh;
+    background: rgba(230, 255, 255, 1);
+    box-shadow: 0px 2px 15px 1px  black;
+    z-index:50;
+   }
+   .head > img {
+    position: relative;
+    width: 10vh;
+    height: 10vh;
+    border: 1px solid black;
+    border-radius: 2px;
+   }
+   .head a{
+   	float: right;
+   	margin: 0 2vw 0 2vw;
+   }
+   #chat{
+    position: fixed;
+    top: 85vh;
+    left: 80vw;
+    width: 15vw;
+   }
+   .trans{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+   }
+   .trans span{
+    text-align: center;
+    width: 50vw;
+    border-bottom: 1px solid black;
+   }
+   #sellSpan{
+   	border-bottom: 1px solid blue;
+   }
+   #buy{
+    display: none;
+   }
+  .cryptoImage{
+  	display:grid;
+  	grid-template-columns: 50% 50%;
+  	grid-template-rows: 50% 50%;
+  }
+  .cryptoImage img{
+  	width: 100%;
+  }
+  .transactionOption h3{
+  	text-align: center;
+  	color: rgba()
+  }
+  .testimonies p img{
+  	width: 20vw;
+  }
+		</style>
+	</head>
+	<body>
+		
+		<div class="head">
+			<img src="./img/drop.png" alt="Dropdown" />
+
+			<span>WISDOM CRYPTO</span>
+			<a href="#">Log in</a>
+			<a href="#">Register</a>
+		</div>
+		<div class="conversion">
+			<h3>Conversion</h3>
+		    <ol>
+		    	<li id="li1"><img src="./img/bitcoinIcon.png" alt="">Bitcoin<img id="arrowdown" src="./img/arrowdown.png" alt=""></li>
+		    	<li id="list">Etheruem</li>
+		    	<li id="list">Pi</li>
+		    	<li id="list">Dodge</li>
+		    </ol>
+		    <h4> 1 BTC = 100,000,000NGN</h4>
+		</div>
+		<div class="transactionOption">
+			<h3>NEW WAYS TO BY AND SELL CRYPTOCURRENCIES <br> SELECT WHICH SUITS YOU BEST</h3>
+			<div class="trans">
+				<span id="buySpan">Buy</span>
+				<span id="sellSpan">Sell</span>
+			</div>
+			<ul id="buy">
+				<li>
+					<a href="#">BANK TRANSFER</a>
+				</li>
+				<li>
+					<a href="#">PAY PAL</a>
+				</li>
+				<li>
+					<a href="#">GIFT CARDS</a>
+				</li>
+				<li>
+					<a href="#">CASH APP</a>
+				</li>
+				<li>
+					<a href="#">BANK TRANSFER</a>
+				</li>
+			</ul>
+			<ul id="sell">
+				<li>
+					<a href="#">BANK TRANSFER</a>
+				</li>
+				<li>
+					<a href="#">EXCHANGE FOR CASH</a>
+				</li>
+				<li>
+					<a href="#">ONLINE WALLET</a>
+				</li>
+				<li>
+					<a href="#">GIFT CARDS</a>
+				</li>
+				<li>
+					<a href="#">DIGITAL CURRENCY</a>
+				</li>
+			</ul>
+		</div>
+		<div class="cryptoImage">
+			<img src="./img/bitcoin.jpeg" alt="bitcoin.png">
+			<img src="./img/ethereum.png" alt="bitcoin.png">
+			<img src="./img/pi.jpeg" alt="bitcoin.png">
+			<img src="./img/dodge.jpeg" alt="bitcoin.png">
+		</div>
+		<div class="testimonies">
+			<h3>
+				TESTIMONIES
+			</h3>
+			<p><img src="./img/user.png" alt="">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis eros leo, vitae ultrices nisi laoreet vel. Quisque volutpat, urna sed tincidunt pulvinar, diam nibh vehicula nisi, vitae gravida augue nisl posuere sem. Vivamus pulvinar id risus a fermentum. Curabitur libero leo, pellentesque vel mi non, elementum efficitur arcu. Duis ut ex rhoncus, euismod metus vitae, elementum eros. Quisque et fermentum nibh, vel tristique urna. Integer quis mauris malesuada, sagittis elit eget, volutpat urna.
+</p>
+		</div>
+		<img id="chat" src="./img/chat.png" alt="" />
+
+		<script>
+  var buySpan = document.getElementById("buySpan");
+  var sellSpan = document.getElementById("sellSpan");
+  var sellList = document.getElementById("sell");
+  var buyList = document.getElementById("buy");
+  var arrowdown = document.getElementById("arrowdown");
+  var list = document.getElementById("list");
+  arrowdown.addEventListener("touchstart", openList);
+  buySpan.addEventListener("touchstart", changeBorderBuy);
+    sellSpan.addEventListener("touchstart", changeBorderSell);
+    function openList(){
+    	list.style.display = "flex";
+    	arrowdown.style.transform = "rotateX(180deg)";
+    }
+  function changeBorderBuy (){
+   buySpan.style.borderBottom = "1px solid blue";
+   sellSpan.style.borderBottom = "1px solid black";
+   buyList.style.display = "flex";
+   buyList.style.display = "block";
+   sellList.style.display = "none";
+  }
+ function changeBorderSell (){
+   sellSpan.style.borderBottom = "1px solid blue";
+   buySpan.style.borderBottom = "1px solid black";
+   sellList.style.display="flex";
+   sellList.style.display="block";
+   buyList.style.display = "none";
+  }
+		</script>
+	</body>
+	
+	
+	
+	
+	
+</html>
